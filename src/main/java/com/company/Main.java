@@ -4,6 +4,7 @@ import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import net.sourceforge.tess4j.util.LoadLibs;
 
+import java.awt.*;
 import java.io.File;
 
 public class Main {
@@ -24,7 +25,8 @@ public class Main {
         instance.setDatapath(tessDataFolder.getAbsolutePath());
 
         try {
-            String result = instance.doOCR(imageFile);
+            Rectangle rect = new Rectangle(305,681,146,2073); // Document uzn
+            String result = instance.doOCR(imageFile, rect);
             System.out.println(result);
         } catch (TesseractException e) {
             System.err.println(e.getMessage());
