@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.company.Main
+Implementation-Vendor: Sun Microsystems, Inc
+Implementation-Title: Java Runtime Environment
+Implementation-Version: 1.6.0
